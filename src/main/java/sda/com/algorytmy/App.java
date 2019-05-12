@@ -10,6 +10,8 @@ public class App {
         System.out.println("Podaj liczbe: ");
         int liczbaFibonacciego = scanner.nextInt();
         System.out.println(fiboFor(liczbaFibonacciego));
+        System.out.println(fiboWhile(liczbaFibonacciego));
+
 
         //Fibonacci FOR i TABLICA
         int[] tab = new int[20];
@@ -45,6 +47,24 @@ public class App {
                 a = b;
                 b = c;
                 c = a + b;//Przeliczenie c z nowymi a i b
+            }
+            return c;
+        }
+    }
+
+    public static int fiboWhile(int n) {
+        if (n < 2) {
+            return n;
+        } else {
+            int a = 0;
+            int b = 1;
+            int c = a + b;//Wyliczenie liczby Fibonacciego
+            int k = 2;//Numer(indeks) liczby Fibonacciego
+            while (k < n) {
+                a = b;
+                b = c;
+                c = a + b;//Przeliczenie c z nowymi a i b
+                k++;
             }
             return c;
         }
