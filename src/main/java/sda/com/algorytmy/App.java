@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
 
-        System.out.println(fibo(10));
+        System.out.println(fibo(11));
         Scanner scanner = new Scanner((System.in));
         System.out.println("Podaj liczbe: ");
         int liczbaFibonacciego = scanner.nextInt();
@@ -38,13 +38,13 @@ public class App {
         } else {
             int a = 0;
             int b = 1;
-            int c = 1;
-            int k = 2;
+            int c = a + b;//Wyliczenie liczby Fibonacciego
+            int k = 2;//Numer(indeks) liczby Fibonacciego
 
             for (k = 2; k < n; k++) {
                 a = b;
                 b = c;
-                c = a + b;
+                c = a + b;//Przeliczenie c z nowymi a i b
             }
             return c;
         }
