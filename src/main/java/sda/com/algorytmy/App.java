@@ -1,10 +1,15 @@
 package sda.com.algorytmy;
 
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
 
         System.out.println(fibo(10));
-        System.out.println(fiboFor(10));
+        Scanner scanner = new Scanner((System.in));
+        System.out.println("Podaj liczbe: ");
+        int liczbaFibonacciego = scanner.nextInt();
+        System.out.println(fiboFor(liczbaFibonacciego));
 
         //Fibonacci FOR i TABLICA
         int[] tab = new int[20];
